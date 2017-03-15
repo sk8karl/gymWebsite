@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta http-equiv="Content-Type" content="text/templates; charset=UTF-8" />
+    <script language="JavaScript" type="text/javascript" th:src="@{/js/maps.js}"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.css" />
+    <link rel="stylesheet" type="text/css" href="/css/index.css" th:href="@{/css/index.css}" />
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script language="JavaScript" type="text/javascript" th:src="@{/js/index.js}"></script>
+
+    <script>
+            function rowClicked(value) {
+                location.href = "/gym/" + value;
+            };
+
+            function townIdSelect(s) {
+              var value = s[s.selectedIndex].id
+                location.href = "/city=" + value;
+            };
+
+        </script>
+    <title>Gymma.info - hitta ditt gym</title>
+</head>
+<body>
+    <div class="ui centered grid">
+        <div class="sixteen wide blue column nav">
+            <div class="nav-menu">
+                <div class="ui secondary menu">
+                    <div class="">
+                        <img class="gymma_logo" th:each="data : ${gymmaLogo}" th:src="@{'/img/' + ${data.gymma_logo_path}} " />
+                    </div>
+                    <div class="right menu">
+                        <select name="Stad" class="ui fluid search dropdown town-selection-head" onchange="townIdSelect(this)">
+                            <option> Välj stad</option>
+                            <option th:each="data : ${towns}" th:text="${data.town_name}" th:id="${data.t_id}">Stockholm</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="twelve wide column frame-size">
+            <p style="float: right;">Uppdaterat 15/3-2017</p>
+            <div class="town-selection-mobile">
+                <select name="Stad" class="ui fluid search dropdown" onchange="townIdSelect(this)">
+                    <option th:each="data : ${townById}" th:text="${data.town_name}"></option>
+                    <option th:each="data : ${towns}" th:text="${data.town_name}" th:id="${data.t_id}">Stockholm</option>
+                </select>
+            </div>
+            <div class="ui cards mobile-view event-table cards-settings">
+                <div class="card card-size" th:each="data : ${gymData}" >
+                    <div class="logo-div-card">
+                        <img class="logo-size mobile-view-logo" th:src="@{'/img/' + ${data.logo_path}} " />
+                    </div>
+                    <div class="content card-info">
+                        <div class="header gym-label" th:text="${data.gym_name}">gym</div>
+                        <div class="meta" th:text="${data.activity}">Activity</div>
+                        <div class="description" th:text="${data.category} + ':  ' + ${data.price} + ' kr' ">kort: pris </div>
+                    </div>
+                </div>
+            </div>
+            <table id="indexTable" class="ui table sortable event-table web-view">
+                <thead>
+                    <tr>
+                        <th></th>
+                        <th class="column-style">Gym</th>
+                        <th class="column-style">Aktiviteter</th>
+                        <th class="column-style">Medlemskap</th>
+                        <th class="column-style">Pris</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="row-size" th:each="data : ${gymData}">
+                        <td class="first_column">
+                            <img class="logo-size" th:src="@{'/img/' + ${data.logo_path}} " /></td>
+                        <td class="column-size"  th:text="${data.gym_name}">hej</td>
+                        <td class="column-size" th:text="${data.activity}">gym</td>
+                        <td class="column-size" th:text="${data.category}">årskort</td>
+                        <td class="column-size last-column" th:text="${data.price} + ' ' + ${data.price_unit}">1000kr</td>
+                    </tr>
+                </tbody>
+            </table>
+            <div id="map" th:id="map" style="width: 100%; height:400px;"></div>
+            <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"> </script>
+            <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYKpxVKEj1N_ISf7S-GxIuoMlbhNN_Vg0&amp;libraries=places&amp;callback=swedenMap" ></script>
+        </div>
+        <div class="sixteen wide grey column bottom-panel">
+            info[at]gymma.info
+        </div>
+    </div>
+<script>
+    $(document).ready(function() {$('table').tablesort()});
+
+</script>
+
+</body>
+</html>

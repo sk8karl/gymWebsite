@@ -1,0 +1,124 @@
+.nav-menu {
+    max-width: 72.5%;
+    margin: 25px auto auto auto !important;
+}
+
+.info-frame {
+    text-align:left !important;
+    margin: 50px 0px 50px 0px !important;
+}
+
+.gymma_logo {
+    width: 200px;
+}
+
+.gymma_logo:hover {
+    cursor: pointer;
+}
+
+.info-title {
+    margin: 3px 0px 0px 11px;
+}
+
+.img-div {
+    max-width: 100px;
+}
+
+.gym-title {
+    height: 100%;
+    align-items: center;
+    display: flex;
+}
+
+.good-to-know-div {
+    min-height: 200px;
+}
+
+.return-button-settings {
+    float: left;
+}
+
+.external-gym-button-settings {
+    float: right;
+    margin: 0px !important;
+}
+
+.description-field {
+    vertical-align: top !important;
+    text-align: center;
+}
+
+.gym-icon {
+    height: 40px;
+    width: 40px;
+}
+
+.info-icon {
+    height: 25px !important;
+    width: 25px !important;
+}
+
+.bottom-panel {
+    padding: 80px 0px 80px 0px !important;
+    text-align: center !important;
+}
+
+
+
+
+
+@media only screen and (max-width: 775px) {
+    .pad-view {
+        min-width: 80%;
+    }
+
+    .mobile-pricelist {
+        display: content !important;
+
+    }
+
+    .gym-logo-mobile-view {
+            min-width: 16%;
+        }
+
+    .gym-info {
+        width: 100%;
+        display: block;
+        font-weight: normal !important;
+    }
+
+    .karl {
+        display: flex;
+        width: 100%;
+        margin-bottom: 20px;
+
+    }
+
+    .return-button-settings {
+        margin: 0% auto !important;
+    }
+
+    .external-gym-button-settings {
+        margin: 0% auto !important;
+    }
+
+}
+
+@media only screen and (max-width: 415px) {
+    .left-pricelist-column {
+        overflow: visible !important;
+    }
+
+    .right-pricelist-column {
+        text-align:  right !important;
+    }
+
+    .gym-logo-mobile-view {
+        min-width: 25%;
+    }
+
+}
+
+@media only screen and (min-width: 775px) {
+
+}
