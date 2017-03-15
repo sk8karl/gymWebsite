@@ -48,7 +48,7 @@ function getGymLocationSweden(gymsFromList, sweCords, townCords) {
     //console.log(gymsFromList.length);
     infowindow = new google.maps.InfoWindow();
     for (var i = 0; i<gymsFromList.length; i++){
-        for (var k=0; k<4; k++){
+        for (var k=0; k<1; k++){
 
         var request = {
 
@@ -137,12 +137,12 @@ function getGymLocation(gymsFromList, latitude, longitude) {
 
             location: town,
             radius: '5000',
-            keyword: gymsFromList[i]
+            query: gymsFromList[i]
         };
 
          console.log('querystring: ' + gymsFromList[i]);
 
-         service.nearbySearch(request, callback);
+         service.textSearch(request, callback);
          //allRequests.push(request);
     }
     //console.log(allRequests);

@@ -48,7 +48,7 @@ function getGymLocationSweden(gymsFromList, sweCords, townCords) {
     //console.log(gymsFromList.length);
     infowindow = new google.maps.InfoWindow();
     for (var i = 0; i<gymsFromList.length; i++){
-        for (var k=0; k<4; k++){
+        for (var k=0; k<1; k++){
 
         var request = {
 
