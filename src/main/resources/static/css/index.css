@@ -2,7 +2,6 @@
     font-size: 60px; text-align: center; padding-top: 200px; color: #fff;
 }
 
-
 .nav{
     height: 100px;
 }
@@ -23,16 +22,6 @@ max-width: 74%;
 
 .town-selection-mobile {
     margin-top: 35px;
-}
-
-.title-color{
-    color: #2185D0 !important;
-    curson: pointer;
-    width: 150px !important;
-}
-
-.title-color:hover {
-    cursor: pointer;
 }
 
 .search-field {
@@ -62,6 +51,10 @@ max-width: 74%;
     min-width: 85px;
 }
 
+.column-size:hover {
+    cursor: pointer;
+}
+
 .row-size {
     height: 80px;
 }
@@ -77,15 +70,14 @@ max-width: 74%;
 
 .first_column_swedenPage {
     width: 145px;
-
 }
 
-.column-style{
+.column-style {
     border-left: none !important;
 }
 
-.gym-label:hover {
-    cursor: pointer;
+.gym-label{
+    width: 150px !important;
 }
 
 .gymma_logo:hover {

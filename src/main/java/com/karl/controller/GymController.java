@@ -30,7 +30,7 @@ import org.springframework.web.servlet.ModelAndView;
 
     @RequestMapping(value = "/", method = RequestMethod.GET)
     public ModelAndView allgym() {
-        ModelAndView mav = new ModelAndView("index-Sweden","data", gymService.getAllGyms_year());
+        ModelAndView mav = new ModelAndView("index","data", gymService.getAllGyms_year());
         mav.addObject("gymData", gymService.getAllGyms_year());
         mav.addObject("towns", gymService.getTowns());
         mav.addObject("gymmaLogo", gymService.getGymmaInfoLogo());

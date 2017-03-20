@@ -69,20 +69,21 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr class="row-size" th:each="data : ${gymData}">
+                    <tr class="row-size" th:each="data : ${gymData}" th:onclick="'javascript:rowClicked(\'' + ${data.g_id} + '/' + ${data.t_id} + '\');' ">
                         <td class="first_column">
                             <img class="logo-size" th:src="@{'/img/' + ${data.logo_path}} " /></td>
-                        <td class="column-size"  th:text="${data.gym_name}">hej</td>
+                        <td class="column-size gym-label"  th:text="${data.gym_name}">hej</td>
                         <td class="column-size" th:text="${data.activity}">gym</td>
                         <td class="column-size" th:text="${data.category}">årskort</td>
                         <td class="column-size last-column" th:text="${data.price} + ' ' + ${data.price_unit}">1000kr</td>
                     </tr>
                 </tbody>
             </table>
+            <!--
             <div id="map" th:id="map" style="width: 100%; height:400px;"></div>
             <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"> </script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYKpxVKEj1N_ISf7S-GxIuoMlbhNN_Vg0&amp;libraries=places&amp;callback=swedenMap" ></script>
-        </div>
+   -->     </div>
         <div class="sixteen wide grey column bottom-panel">
             info[at]gymma.info
         </div>
