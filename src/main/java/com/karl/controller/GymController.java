@@ -64,6 +64,7 @@ import org.springframework.web.servlet.ModelAndView;
         mav.addObject("gymInfo", gymService.getGeneralGymInfo(g_id));
         mav.addObject("town_name", gymService.getTownById(t_id));
         mav.addObject("descriptions", gymService.getGymDescriptionById(g_id));
+        mav.addObject("towns", gymService.getTowns());
         return mav;
     }
 

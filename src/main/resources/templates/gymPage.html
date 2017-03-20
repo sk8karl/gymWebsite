@@ -30,6 +30,11 @@
                 window.open(url,'karl');
             };
 
+            function townIdSelect(s) {
+              var value = s[s.selectedIndex].id
+                location.href = "/gym/" + value;
+            };
+
         </script>
     </head>
 <body>                              <!--th:value="${data.website}" th:onclick="'javascript:toGymWebsite(value);' "> -->
@@ -42,7 +47,7 @@
                 </div>
                 <div class="right menu">
                     <select name="Stad" class="ui fluid search dropdown town-selection-head" onchange="townIdSelectGymPage(this)">
-                        <option> Välj stad</option>
+                        <option th:each="data : ${town_name}" th:text="${data.town_name}"></option>
                         <option th:each="data : ${towns}" th:text="${data.town_name}" th:id="${data.t_id}">Stockholm</option>
                     </select>
                 </div>
