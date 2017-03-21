@@ -3,6 +3,11 @@
     margin: 25px auto auto auto !important;
 }
 
+.town-selection-head {
+    width: 150px !important;
+    color: #4d4d4d;
+}
+
 .info-frame {
     text-align:left !important;
     margin: 50px 0px 50px 0px !important;

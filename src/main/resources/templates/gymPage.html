@@ -30,9 +30,17 @@
                 window.open(url,'karl');
             };
 
-            function townIdSelect(s) {
+            function townIdSelectGymPage(s) {
+
               var value = s[s.selectedIndex].id
-                location.href = "/gym/" + value;
+
+              var getDivFromGymPage = document.getElementById('gymTitle');
+              console.log(getDivFromGymPage);
+              var selectedGymID = getDivFromGymPage.dataset.gymid;
+
+              console.log(selectedGymID);
+
+              location.href = "/gym/" + selectedGymID + "/" + value;
             };
 
         </script>
@@ -63,7 +71,7 @@
     </div>
     <div class="ten wide column">
         <div class="gym-title">
-            <h1 th:each="data : ${gymInfo}" class="title-position" th:text="${data.gym_name}">namn gym</h1>
+            <h1 th:each="data : ${gymInfo}" class="title-position" id="gymTitle" th:attr="data-gymid=${data.g_id}" th:text="${data.gym_name}">namn gym</h1>
         </div>
     </div>
     <div class="twelve wide column">

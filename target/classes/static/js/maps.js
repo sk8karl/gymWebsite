@@ -212,8 +212,8 @@ function initialize(queryString, latitude, longitude) {
         query: queryString
       };
 
-      console.log('townCords: ' + townCords);
-      console.log('querystring: ' + queryString);
+      //console.log('townCords: ' + townCords);
+      //console.log('querystring: ' + queryString);
 
 
     //console.log(request);
