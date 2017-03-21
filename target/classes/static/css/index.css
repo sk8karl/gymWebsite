@@ -3,12 +3,12 @@
 }
 
 .nav{
-    height: 100px;
+    height: 85px;
 }
 
 .nav-menu {
 max-width: 74%;
-    margin: 25px auto auto auto !important;
+    margin: 10px auto auto auto !important;
 }
 
 .logo{
@@ -18,23 +18,45 @@ max-width: 74%;
 .town-selection-head {
     width: 150px !important;
     color: #4d4d4d;
+    margin-top: 7px;
 }
 
 .town-selection-mobile {
     margin-top: 35px;
 }
 
-.search-field {
-    width:100%;
-    margin-top: 20px;
+.background-image {
+    width: 100%;
+    margin-top: 7px;
 }
 
-.bottom-panel {
-    padding: 80px 0px 80px 0px !important;
+.background-img-index {
+    background-image: url('../img/marklyft.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.background-img-citySelected {
+    background-image: url('../img/biffar.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .event-table {
-    margin: 30px 0px 30px 0px !important;
+    opacity: 0.95;
+    margin: 20px 0px !important;
+}
+
+.headline {
+    color: white;
+    margin: 265px 0px 195px 0px;
+    width: 80%;
+}
+
+.headline-font {
+    font-size: 3rem !important;
 }
 
 .card-size {
@@ -114,7 +136,12 @@ max-width: 74%;
     text-align: left;
 }
 
-
+.footer {
+    color: white;
+    background-color: gray;
+    text-align: center;
+    padding: 3px !important;
+}
 
 
 @media only screen and (max-width: 775px) {
@@ -124,6 +151,14 @@ max-width: 74%;
 
     .town-selection-head {
         display: none !important;
+    }
+
+    .headline {
+        margin: 65px 0px 65px 0px !important;
+    }
+
+    .headline-font {
+            font-size: 1 rem !important;
     }
 
 }
@@ -145,8 +180,6 @@ display: none !important}
 
     .frame-size{
         min-width: 725px;
-        margin-bottom: 20px;
-
     }
 
     .town-selection-mobile {

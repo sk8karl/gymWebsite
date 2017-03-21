@@ -11,6 +11,7 @@
 .info-frame {
     text-align:left !important;
     margin: 50px 0px 50px 0px !important;
+    background
 }
 
 .gymma_logo {
@@ -68,8 +69,14 @@
     text-align: center !important;
 }
 
-
-
+.footer {
+    color: white;
+    background-color: gray;
+    text-align: center;
+    padding: 3px !important;
+    float: left;
+    width:50%;
+}
 
 
 @media only screen and (max-width: 775px) {

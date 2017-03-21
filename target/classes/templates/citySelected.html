@@ -29,7 +29,7 @@
     </head>
 <body>
 
-<div class="ui centered grid">
+<div class="ui centered grid background-img-citySelected">
     <div class="sixteen wide blue column nav">
         <div class="nav-menu">
             <div class="ui secondary menu">
@@ -46,8 +46,6 @@
         </div>
     </div>
     <div class="twelve wide column frame-size">
-        <p style="float: right;">Uppdaterat 15/3-2017</p>
-
         <div class="town-selection-mobile">
             <select name="Stad" class="ui fluid search dropdown" onchange="townIdSelect(this)">
                 <option th:each="data : ${townById}" th:text="${data.town_name}"></option>
@@ -91,17 +89,15 @@
         <div id="map" th:id="map" style="width: 100%; height:400px;" th:each="data : ${townById}" th:attr="data-longitude=${data.longitude}, data-latitude=${data.latitude}"></div>
         <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBjLeTEuswfQWdh7gIniIMV6d6QU3INYbY&amp;libraries=places&amp;callback=indexMap" ></script>
 -->
-    </div>
-    <div class="sixteen wide grey column bottom-panel">
-        info[at]gymma.info
 
+    </div>
+    <div class="eight wide column footer">
+        <p class="footer-font">info[at]gymma.info</p>
+    </div>
+    <div class="eight wide column footer">
+        <p class="footer-font">Uppdaterat 20/3 -2017</p>
     </div>
 </div>
-
-<script>
-    $(document).ready(function() {$('indexTable').tablesort()});
-
-</script>
 
 </body>
 </html>

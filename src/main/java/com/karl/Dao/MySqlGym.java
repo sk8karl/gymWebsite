@@ -170,6 +170,8 @@ public class MySqlGym implements GymDao {
             public Gym mapRow(ResultSet rs, int i) throws SQLException {
                 Gym gym = new Gym();
                 gym.setGymma_logo_path(rs.getString("gymma_logo_path"));
+                gym.setBackgroundImagePath(rs.getString("backgroundImagePath"));
+                gym.setBackgroundImagePath2(rs.getString("backgroundImagePath2"));
                 return gym;
             }
         });

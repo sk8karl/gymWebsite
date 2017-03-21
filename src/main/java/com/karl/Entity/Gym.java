@@ -21,10 +21,14 @@ public class Gym {
     private String longitude;
     private String description;
     private String price_unit;
+    private String BackgroundImagePath;
+    private String BackgroundImagePath2;
+
 
     public Gym(int G_id, String gym_name, String logo_path, int price, String category, String activity,
                String town_area, String town_name, String website, int t_id, String gymma_logo_path,
-               String mapsSearchString, String latitude, String longitude, String description, String price_unit) {
+               String mapsSearchString, String latitude, String longitude, String description, String price_unit,
+               String BackgroundImagePath, String BackgroundImagePath2) {
         this.G_id = G_id;
         this.gym_name = gym_name;
         this.logo_path = logo_path;
@@ -41,6 +45,8 @@ public class Gym {
         this.longitude = longitude;
         this.description = description;
         this.price_unit = price_unit;
+        this.BackgroundImagePath = BackgroundImagePath;
+        this.BackgroundImagePath2 = BackgroundImagePath2;
     }
 
     public Gym() {
@@ -174,6 +180,22 @@ public class Gym {
 
     public void setPrice_unit(String price_unit) {
         this.price_unit = price_unit;
+    }
+
+    public String getBackgroundImagePath() {
+        return BackgroundImagePath;
+    }
+
+    public void setBackgroundImagePath(String backgroundImagePath) {
+        BackgroundImagePath = backgroundImagePath;
+    }
+
+    public String getBackgroundImagePath2() {
+        return BackgroundImagePath2;
+    }
+
+    public void setBackgroundImagePath2(String backgroundImagePath2) {
+        BackgroundImagePath2 = backgroundImagePath2;
     }
 }
 

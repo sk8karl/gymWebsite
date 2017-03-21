@@ -22,7 +22,7 @@
     <title>Gymma.info - hitta ditt gym</title>
 </head>
 <body>
-    <div class="ui centered grid">
+    <div class="ui centered grid background-img-index">
         <div class="sixteen wide blue column nav">
             <div class="nav-menu">
                 <div class="ui secondary menu">
@@ -38,8 +38,10 @@
                 </div>
             </div>
         </div>
+        <div class="headline">
+            <h2 class="headline-font">Jämför priser, utbud på aktivteter och antalet lokaler för alla gymkedjor i din stad.</h2>
+        </div>
         <div class="twelve wide column frame-size">
-            <p style="float: right;">Uppdaterat 15/3-2017</p>
             <div class="town-selection-mobile">
                 <select name="Stad" class="ui fluid search dropdown" onchange="townIdSelect(this)">
                     <option th:each="data : ${townById}" th:text="${data.town_name}"></option>
@@ -84,8 +86,13 @@
             <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"> </script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYKpxVKEj1N_ISf7S-GxIuoMlbhNN_Vg0&amp;libraries=places&amp;callback=swedenMap" ></script>
    -->     </div>
-        <div class="sixteen wide grey column bottom-panel">
-            info[at]gymma.info
+        <div class="sixteen wide grey column footer">
+            <div class="eight wide column">
+                <p>info[at]gymma.info</p>
+            </div>
+            <div class="eight wide column">
+                <p>Uppdaterat 20/3 -2017</p>
+            </div>
         </div>
     </div>
 <script>
