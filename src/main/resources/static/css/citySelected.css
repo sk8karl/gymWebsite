@@ -3,12 +3,12 @@
 }
 
 .nav{
-    height: 100px;
+    height: 12%;
 }
 
 .nav-menu {
-max-width: 74%;
-    margin: 25px auto auto auto !important;
+    max-width: 74%;
+    margin: 10px auto auto auto !important;
 }
 
 .logo{
@@ -18,28 +18,28 @@ max-width: 74%;
 .town-selection-head {
     width: 150px !important;
     color: #4d4d4d;
+    margin-top: 7px;
 }
 
 .town-selection-mobile {
     margin-top: 35px;
 }
 
-.search-field {
-    width:100%;
-    margin-top: 20px;
+.background-image {
+    width: 100%;
+    margin-top: 7px;
 }
 
-.bottom-panel {
-    padding: 80px 0px 80px 0px !important;
+.background-img-citySelected {
+    background-image: url('../img/biffar.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
 }
 
 .event-table {
-    margin: 30px 0px 30px 0px !important;
-}
-
-.card-size {
-    width: 100% !important;
-    margin: 0.875em 0em !important;
+    opacity: 0.95;
+    margin: 20px 0px !important;
 }
 
 .float-right {
@@ -106,21 +106,34 @@ max-width: 74%;
     display: flex;
 }
 
+.card-size {
+    width: 100% !important;
+    margin: 0.875em 0em !important;
+}
+
+.card-size:hover {
+    cursor: pointer;
+}
+
 .card-info {
     margin-left: 110px !important;
 }
 
 .cards-settings {
     text-align: left;
+    opacity: 0.95;
 }
+
+.town-button-select {
+    margin-left: 5% !important;
+}
+
 
 .footer {
     color: white;
-    background-color: gray;
     text-align: center;
     padding: 3px !important;
     float: left;
-    width:50%;
 }
 
 
@@ -131,6 +144,14 @@ max-width: 74%;
 
     .town-selection-head {
         display: none !important;
+    }
+
+    .headline {
+        margin: 65px 0px 65px 0px !important;
+    }
+
+    .headline-font {
+            font-size: 1 rem !important;
     }
 
 }
@@ -150,11 +171,7 @@ max-width: 74%;
 .mobile-view {
 display: none !important}
 
-    .frame-size{
-        min-width: 725px;
-        margin-bottom: 20px;
 
-    }
 
     .town-selection-mobile {
         display: none;
