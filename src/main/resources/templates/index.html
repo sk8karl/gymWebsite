@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta name="description" content="Jämför alla gymkedjor i Sverige. Jämför alla priser på årskort och vilka aktiviteter gymmen erbjuder.">
+    <meta name="description" content="Jämför alla gymkedjor i Sverige. Jämför alla priser på årskort och vilka aktiviteter gymmen erbjuder." />
 
     <meta http-equiv="Content-Type" content="text/templates; charset=UTF-8" />
     <script language="JavaScript" type="text/javascript" th:src="@{/js/maps.js}"></script>
@@ -9,7 +9,6 @@
     <link rel="stylesheet" type="text/css" href="/css/index.css" th:href="@{/css/index.css}" />
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script language="JavaScript" type="text/javascript" th:src="@{/js/index.js}"></script>
-
     <script>
             function rowClicked(value) {
                 location.href = "/gym/" + value;
@@ -43,7 +42,11 @@
         <div class="headline">
             <h2 class="headline-font">Jämför priser, utbud på aktivteter och antalet lokaler för alla gymkedjor i din stad.</h2>
         </div>
-        <div class="twelve wide column frame-size">
+        <div class="twelve wide column button-frame">
+            <button class="ui primary button large town-button-select" th:each="data : ${towns}" th:text="${data.town_name}" th:id="${data.t_id}" onchange="townIdSelect(this)">
+                Stockholm
+            </button>
+<!--
             <div class="town-selection-mobile">
                 <select name="Stad" class="ui fluid search dropdown" onchange="townIdSelect(this)">
                     <option th:each="data : ${townById}" th:text="${data.town_name}"></option>
@@ -83,19 +86,17 @@
                     </tr>
                 </tbody>
             </table>
-            <!--
+
             <div id="map" th:id="map" style="width: 100%; height:400px;"></div>
             <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"> </script>
             <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCYKpxVKEj1N_ISf7S-GxIuoMlbhNN_Vg0&amp;libraries=places&amp;callback=swedenMap" ></script>
    -->     </div>
-        <div class="sixteen wide grey column footer">
-            <div class="eight wide column">
+            <div class="eight wide column footer">
                 <p>info[at]gymma.info</p>
             </div>
-            <div class="eight wide column">
+            <div class="eight wide column footer">
                 <p>Uppdaterat 20/3 -2017</p>
             </div>
-        </div>
     </div>
 <script>
     $(document).ready(function() {$('table').tablesort()});

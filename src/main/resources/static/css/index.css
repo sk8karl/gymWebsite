@@ -34,7 +34,8 @@ max-width: 74%;
     background-image: url('../img/marklyft.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-    background-position: center center;
+    background-position: center top;
+
 }
 
 .background-img-citySelected {
@@ -51,7 +52,7 @@ max-width: 74%;
 
 .headline {
     color: white;
-    margin: 265px 0px 190px 0px;
+    margin: 15% 0px 12% 0px;
     width: 80%;
 }
 
@@ -136,11 +137,22 @@ max-width: 74%;
     text-align: left;
 }
 
+.button-frame {
+    margin-bottom: 13.6%;
+}
+
+.town-button-select {
+    margin-left: 8% !important;
+
+}
+
 .footer {
     color: white;
     background-color: gray;
     text-align: center;
     padding: 3px !important;
+    float: left;
+    width:50%;
 }
 
 
@@ -178,9 +190,7 @@ max-width: 74%;
 .mobile-view {
 display: none !important}
 
-    .frame-size{
-        min-width: 725px;
-    }
+
 
     .town-selection-mobile {
         display: none;
