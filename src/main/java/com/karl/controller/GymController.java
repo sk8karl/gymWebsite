@@ -11,8 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 
     @RequestMapping(value = "/")
-    public class GymController implements ErrorController{
-
+    public class GymController {
+/*
     private static final String PATH = "/error";
 
     @RequestMapping(value = PATH)
@@ -24,7 +24,7 @@ import org.springframework.web.servlet.ModelAndView;
     public String getErrorPath() {
         return PATH;
     }
-
+*/
     @Autowired
     private GymService gymService;
 
