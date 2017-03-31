@@ -44,8 +44,8 @@ public class MySqlGym implements GymDao {
                 "Join pricelist ON gym.g_id=pricelist.g_id " +
                 "Join gym_town ON gym.g_id=gym_town.g_id " +
                 "Join town ON gym_town.t_id=town.t_id " +
-                "AND (pricelist.category='Årskort' OR pricelist.category='Månadskort autogiro' OR pricelist.category='Livsstilsprogram - Bas, dagsavgift')" +
-                "GROUP by gym.gym_name ";
+                "AND (pricelist.category='Årskort' OR pricelist.category='Månadskort autogiro' OR pricelist.category='Livsstilsprogram - Bas, dagsavgift') " +
+                "GROUP by gym.g_id ";
 
         List<Gym> gyms = jdbcTemplate.query(sql, new GymRowMapper());
 
