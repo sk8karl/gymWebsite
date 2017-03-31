@@ -1,0 +1,10 @@
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/service/GymService.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/main.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/Dao/MySqlGym.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/Dao/GymDao.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/Entity/Event.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/controller/EventController.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/Dao/MySqlEvent.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/Entity/Gym.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/service/EventService.java
+/home/karl/gymma/gymWebsite/src/main/java/com/karl/controller/GymController.java
