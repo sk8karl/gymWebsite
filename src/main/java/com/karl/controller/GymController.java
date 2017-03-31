@@ -13,17 +13,16 @@ import org.springframework.web.servlet.ModelAndView;
     @RequestMapping(value = "/")
     public class GymController {
 
-//    private static final String PATH = "/error";
+    private static final String PATH = "/error";
 
-  //  @RequestMapping(value = PATH)
-    //public String error() {
-      //  return "Det här va inte bra, verkar som att URL:en inte är giltig.";
-    //}
+    @RequestMapping(value = PATH)
+    public String error() {
+        return "Det här va inte bra. Aj aj aj. Verkar som att URL:en inte är giltig.";
+    }
 
-    //@Override
-    //public String getErrorPath() {
-      //  return PATH;
-    //}
+    public String getErrorPath() {
+        return PATH;
+    }
 
     @Autowired
     private GymService gymService;
