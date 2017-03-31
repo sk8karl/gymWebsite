@@ -12,7 +12,6 @@
 
         </script>
         <meta name="description" content="Jämför alla medlemserbjudanden som en gymkedje erbjuder. Här kan du se alla olika medlemskap, de aktiviteter gymmet erbjuder samt tips om gymmet." />
-
         <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
         <meta charset="utf-8" />
 
@@ -60,7 +59,7 @@
 <body>                              <!--th:value="${data.website}" th:onclick="'javascript:toGymWebsite(value);' "> -->
 <div class="ui grid">
     <div class="sixteen wide blue column nav">
-        <div class="nav-menu">
+        <div class="nav-menu gymma-logo-placement">
             <div class="ui secondary menu">
                 <div th:onclick="'javascript:toStartPage();' ">
                     <img th:each="data : ${gymmaLogo}" class="gymma_logo"  th:src="@{'/img/' + ${data.gymma_logo_path}} " />
@@ -159,12 +158,12 @@
         </div>
     </div>
     <div class="twelve wide column">
-        <div class="karl">
+        <div class="bottom-buttons">
             <button class="large blue basic ui button return-button-settings" th:each="data : ${town_name}" th:text="'Tillbaka till alla gym i ' + ${data.town_name}" th:onclick="'javascript:toGymsInTown(\'' + ${data.t_id} + '\');' ">
                 tillbaka
             </button>
         </div>
-        <div class="karl">
+        <div class="bottom-buttons">
             <button class="large blue ui button external-gym-button-settings" th:each="data : ${gymInfo}" th:text="'Till ' + ${data.gym_name} + ':s hemsida'" th:value="${data.website}" th:onclick="'javascript:toGymWebsite(value);' ">
                 Till gymets hemsida
             </button>

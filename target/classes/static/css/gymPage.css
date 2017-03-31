@@ -1,6 +1,6 @@
 .nav-menu {
     max-width: 72.5%;
-    margin: 25px auto auto auto !important;
+    margin: 20px auto auto auto !important;
 }
 
 .town-selection-head {
@@ -80,6 +80,12 @@
 
 
 @media only screen and (max-width: 775px) {
+
+    .gymma-logo-placement {
+        text-align: center;
+        display: table !important;
+    }
+
     .pad-view {
         min-width: 80%;
     }
@@ -88,6 +94,7 @@
         display: content !important;
 
     }
+
 
     .gym-logo-mobile-view {
             min-width: 16%;
@@ -99,7 +106,7 @@
         font-weight: normal !important;
     }
 
-    .karl {
+    .bottom-buttons {
         display: flex;
         width: 100%;
         margin-bottom: 20px;
@@ -131,6 +138,10 @@
 
 }
 
-@media only screen and (min-width: 775px) {
+@media only screen and (max-width: 575px) {
+
+    .town-selection-head {
+        display: none !important
+    }
 
 }

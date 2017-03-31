@@ -100,6 +100,11 @@
         display: none !important;
     }
 
+    .gymma-logo-placement {
+        text-align: center;
+        display: -webkit-inline-box !important;
+    }
+
     .headline {
         margin: 13% 0% 23% 0% !important
     }
@@ -114,13 +119,10 @@
 
 }
 
-@media only screen and (max-width: 415px) {
-
-}
-
 @media only screen and (min-width: 791px) {
     .town-selection-mobile {
         display: none !important;
     }
+
 
 }

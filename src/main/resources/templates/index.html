@@ -13,7 +13,7 @@
 
     </script>
     <meta name="description" content="Jämför alla gymkedjor i Sverige. Jämför alla priser på årskort och vilka aktiviteter gymmen erbjuder." />
-    <meta name="viewport" content="width=device-width,initial-scale=1.0" />
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/templates; charset=UTF-8" />
     <script language="JavaScript" type="text/javascript" th:src="@{/js/maps.js}"></script>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.css" />
@@ -42,7 +42,7 @@
     <div class="ui centered grid background-img-index">
         <div class="sixteen wide blue column nav">
             <div class="nav-menu">
-                <div class="ui secondary menu">
+                <div class="ui secondary menu gymma-logo-placement">
                     <div class="">
                         <img class="gymma_logo" th:each="data : ${gymmaLogo}" th:src="@{'/img/' + ${data.gymma_logo_path}} " />
                     </div>

@@ -59,7 +59,7 @@
 <body>                              <!--th:value="${data.website}" th:onclick="'javascript:toGymWebsite(value);' "> -->
 <div class="ui grid">
     <div class="sixteen wide blue column nav">
-        <div class="nav-menu">
+        <div class="nav-menu gymma-logo-placement">
             <div class="ui secondary menu">
                 <div th:onclick="'javascript:toStartPage();' ">
                     <img th:each="data : ${gymmaLogo}" class="gymma_logo"  th:src="@{'/img/' + ${data.gymma_logo_path}} " />

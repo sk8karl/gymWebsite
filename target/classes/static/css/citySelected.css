@@ -8,7 +8,7 @@
 
 .nav-menu {
     max-width: 74%;
-    margin: 10px auto auto auto !important;
+    margin: 20px auto auto auto !important;
 }
 
 .logo{
@@ -138,6 +138,11 @@
 
 
 @media only screen and (max-width: 775px) {
+    .gymma-logo-placement {
+        text-align: center;
+        display: -webkit-inline-box !important;
+    }
+
     .web-view {
         display: none
     }
