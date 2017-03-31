@@ -17,7 +17,7 @@ import org.springframework.web.servlet.ModelAndView;
 
     @RequestMapping(value = PATH)
     public String error() {
-        return "Det här va inte bra. Aj aj aj. Verkar som att URL:en inte är giltig.";
+        return "Det här va inte bra. Aj aj aj. Verkar som att URL:en inte är giltig." + PATH;
     }
 
     @Override
