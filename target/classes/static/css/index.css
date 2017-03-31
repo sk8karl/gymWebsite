@@ -50,7 +50,7 @@
 
 
 .gymma_logo {
-    width: 200px;
+    width: 150px;
 }
 
 .logo-size {
@@ -103,6 +103,10 @@
     .gymma-logo-placement {
         text-align: center;
         display: -webkit-inline-box !important;
+    }
+
+    .middle-frame {
+        width: 90% !important;
     }
 
     .headline {
