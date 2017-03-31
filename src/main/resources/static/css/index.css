@@ -105,6 +105,10 @@
         display: -webkit-inline-box !important;
     }
 
+    .middle-frame {
+        width: 90% !important;
+    }
+
     .headline {
         margin: 13% 0% 23% 0% !important
     }
