@@ -99,7 +99,7 @@
         font-weight: normal !important;
     }
 
-    .karl {
+    .bottom-buttons {
         display: flex;
         width: 100%;
         margin-bottom: 20px;
@@ -128,9 +128,5 @@
     .gym-logo-mobile-view {
         min-width: 25%;
     }
-
-}
-
-@media only screen and (min-width: 775px) {
 
 }
