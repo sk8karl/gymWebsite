@@ -34,6 +34,10 @@
                 location.href = "/city=" + townid;
             };
 
+            function cityClickedButton(townid) {
+                location.href = "/city=" + townid;
+            };
+
             $('.ui.compact.menu')
               .dropdown()
             ;
@@ -63,7 +67,7 @@
                 <h2 class="headline-font">Jämför priser, utbud på aktivteter och antalet lokaler för alla gymkedjor i din stad.</h2>
             </div>
 
-            <button class="ui primary button large town-button-select" th:each="data : ${towns}" th:text="${data.town_name}" th:onclick="'javascript:cityClicked(\'' + ${data.t_id} + '\');' ">
+            <button class="ui primary button large town-button-select" th:each="data : ${towns}" th:text="${data.town_name}" th:onclick="'javascript:cityClickedButton(\'' + ${data.t_id} + '\');' ">
                 Town name
             </button>
 
