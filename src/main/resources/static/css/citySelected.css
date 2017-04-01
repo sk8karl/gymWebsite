@@ -21,6 +21,11 @@
     margin-top: 7px;
 }
 
+.town-label {
+    color: white;
+    margin: 15px 0px 25px 0px !important;
+}
+
 .town-selection-mobile {
     margin-top: 35px;
 }

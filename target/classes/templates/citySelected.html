@@ -58,6 +58,7 @@
         </div>
     </div>
     <div class="fourteen wide column frame-size">
+        <h2 class="town-label" th:each="data : ${townById}" th:text="${'Gym i ' + data.town_name}">Gym i Uppsala</h2>
         <div class="town-selection-mobile">
             <select name="Stad" class="ui fluid search dropdown" onchange="townIdSelect(this)">
                 <option th:each="data : ${townById}" th:text="${data.town_name}"></option>

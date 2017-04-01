@@ -8,17 +8,22 @@
 
 .nav-menu {
     max-width: 74%;
-    margin: 10px auto auto auto !important;
+    margin: 16px auto auto auto !important;
 }
 
 .logo{
     width:60px !important;
 }
 
+.town-label {
+    color: white;
+    margin: 10px 0px;
+}
+
 .town-selection-head {
     width: 150px !important;
     color: #4d4d4d;
-    margin-top: 7px;
+    margin-top: 3px;
 }
 
 .town-selection-mobile {
@@ -37,6 +42,7 @@
     background-position: center top;
     height: 102%;
 
+
 }
 
 .headline {
@@ -50,7 +56,7 @@
 
 
 .gymma_logo {
-    width: 150px;
+    width: 175px;
 }
 
 .logo-size {
@@ -106,7 +112,7 @@
     }
 
     .middle-frame {
-        width: 90% !important;
+        min-width: 90% !important;
     }
 
     .headline {
@@ -128,5 +134,8 @@
         display: none !important;
     }
 
+    .background-img-index {
+        min-height: 713px;
+    }
 
 }
