@@ -1,0 +1,141 @@
+#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;
+    font-size: 60px; text-align: center; padding-top: 200px; color: #fff;
+}
+
+.nav{
+    height: 12%;
+}
+
+.nav-menu {
+    max-width: 74%;
+    margin: 16px auto auto auto !important;
+}
+
+.logo{
+    width:60px !important;
+}
+
+.town-label {
+    color: white;
+    margin: 10px 0px;
+}
+
+.town-selection-head {
+    width: 150px !important;
+    color: #4d4d4d;
+    margin-top: 3px;
+}
+
+.town-selection-mobile {
+    margin-top: 35px;
+}
+
+.background-image {
+    width: 100%;
+    margin-top: 7px;
+}
+
+.background-img-index {
+    background-image: url('../img/marklyft.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center top;
+    height: 102%;
+
+
+}
+
+.headline {
+    color: white;
+    margin: 9% 0% 19% 0%;
+}
+
+.headline-font {
+    font-size: 3rem;
+}
+
+
+.gymma_logo {
+    width: 175px;
+}
+
+.logo-size {
+    max-width: 100px;
+}
+
+
+.town-button-select {
+    margin-left: 5% !important;
+}
+
+.town-selection-mobile {
+    background-color: #2185D0 !important;
+    width: 80%;
+}
+
+.dropdown-icon {
+    position: absolute !important;
+    right: 17px;
+    bottom: 17px;
+    color: white;
+}
+
+.dropdown-title {
+    margin: 0px !important;
+    color: white;
+}
+
+.middle-frame {
+    height: 80%;
+}
+
+.footer {
+    color: white;
+    text-align: center;
+    padding: 3px !important;
+    float: left;
+}
+
+
+@media only screen and (max-width: 791px) {
+    .web-view {
+        display: none
+    }
+
+    .town-selection-head {
+        display: none !important;
+    }
+
+    .gymma-logo-placement {
+        text-align: center;
+        display: -webkit-inline-box !important;
+    }
+
+    .middle-frame {
+        min-width: 90% !important;
+    }
+
+    .headline {
+        margin: 13% 0% 23% 0% !important
+    }
+
+    .headline-font {
+            font-size: 2rem !important;
+    }
+
+    .town-button-select {
+        display: none !important;
+    }
+
+}
+
+@media only screen and (min-width: 791px) {
+    .town-selection-mobile {
+        display: none !important;
+    }
+
+    .background-img-index {
+        min-height: 713px;
+    }
+
+}

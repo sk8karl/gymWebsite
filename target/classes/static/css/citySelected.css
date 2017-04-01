@@ -1,0 +1,190 @@
+#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;
+    font-size: 60px; text-align: center; padding-top: 200px; color: #fff;
+}
+
+.nav{
+    height: 12%;
+}
+
+.nav-menu {
+    max-width: 83.5%;
+    margin: 20px auto auto auto !important;
+}
+
+.logo{
+    width:60px !important;
+}
+
+.town-selection-head {
+    width: 150px !important;
+    color: #4d4d4d;
+    margin-top: 7px;
+}
+
+.town-label {
+    color: white;
+    margin: 15px 0px 25px 0px !important;
+}
+
+.town-selection-mobile {
+    margin-top: 35px;
+}
+
+.background-image {
+    width: 100%;
+    margin-top: 7px;
+}
+
+.background-img-citySelected {
+    background-image: url('../img/biffar.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.event-table {
+    opacity: 0.95;
+    margin: 20px 0px !important;
+}
+
+.float-right {
+    float:right;
+}
+
+.column-size {
+    max-width:450px;
+    min-width: 85px;
+}
+
+.column-size:hover {
+    cursor: pointer;
+}
+
+.row-size {
+    height: 80px;
+}
+
+.last-column{
+    min-width: 94px;
+    text-align: right !important;
+}
+
+.first_column {
+    width: 145px;
+}
+
+.first_column_swedenPage {
+    width: 145px;
+}
+
+.column-style {
+    border-left: none !important;
+}
+
+.gym-label{
+    width: 150px !important;
+}
+
+.gymma_logo:hover {
+    cursor:pointer;
+}
+
+.gymma_logo {
+    width: 200px;
+}
+
+.logo-size {
+    max-width: 100px;
+}
+
+.logo-card {
+    height: 100%;
+}
+
+.logo-div-card{
+    height: 80px;
+    max-width: 100px;
+    position: absolute;
+    margin-top: 7px;
+    margin-left: 7px;
+    align-items: center;
+    display: flex;
+}
+
+.card-size {
+    width: 100% !important;
+    margin: 0.875em 0em !important;
+}
+
+.card-size:hover {
+    cursor: pointer;
+}
+
+.card-info {
+    margin-left: 110px !important;
+}
+
+.cards-settings {
+    text-align: left;
+    opacity: 0.95;
+}
+
+.town-button-select {
+    margin-left: 5% !important;
+}
+
+
+.footer {
+    color: white;
+    text-align: center;
+    padding: 3px !important;
+    float: left;
+}
+
+
+@media only screen and (max-width: 775px) {
+    .gymma-logo-placement {
+        text-align: center;
+        display: -webkit-inline-box !important;
+    }
+
+    .web-view {
+        display: none
+    }
+
+    .town-selection-head {
+        display: none !important;
+    }
+
+    .headline {
+        margin: 65px 0px 65px 0px !important;
+    }
+
+    .headline-font {
+            font-size: 1 rem !important;
+    }
+
+}
+
+@media only screen and (max-width: 415px) {
+    .mobile-view-logo {
+        display: none
+    }
+
+    .card-info {
+        margin-left: 7px !important;
+    }
+
+}
+
+@media only screen and (min-width: 775px) {
+.mobile-view {
+display: none !important}
+
+
+
+    .town-selection-mobile {
+        display: none;
+    }
+
+}
