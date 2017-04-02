@@ -3,7 +3,7 @@
 }
 
 .nav{
-    height: 12%;
+    height: 85px;
 }
 
 .nav-menu {
@@ -120,7 +120,7 @@
     }
 
     .headline-font {
-            font-size: 2rem !important;
+        font-size: 2rem !important;
     }
 
     .town-button-select {
