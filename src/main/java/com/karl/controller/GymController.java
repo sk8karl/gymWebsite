@@ -11,20 +11,20 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 
     @RequestMapping(value = "/")
-    public class GymController {
-/*
+    public class GymController implements ErrorController{
+
     private static final String PATH = "/error";
 
     @RequestMapping(value = PATH)
     public String error() {
-        return "Det här va inte bra. Aj aj aj. Verkar som att URL:en inte är giltig." + PATH;
+        return "Det här va inte bra. Aj aj aj. Verkar som att URL:en inte är giltig.";
     }
 
     @Override
     public String getErrorPath() {
         return PATH;
     }
-*/
+
     @Autowired
     private GymService gymService;
 
@@ -67,7 +67,7 @@ import org.springframework.web.servlet.ModelAndView;
         mav.addObject("towns", gymService.getTowns());
         return mav;
     }
-
+/*
     @RequestMapping(value = "/{g_id}", method = RequestMethod.DELETE)
     public void deleteGymById(@PathVariable("g_id") int id){
         gymService.removeGymById(id);
@@ -82,6 +82,7 @@ import org.springframework.web.servlet.ModelAndView;
     public void insertGym(@RequestBody Gym gym){
         gymService.insertGym(gym);
     }
+    */
 }
 
 
