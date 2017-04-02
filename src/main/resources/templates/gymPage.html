@@ -20,8 +20,6 @@
         <link rel="stylesheet" type="text/css" href="../static/css/gym-page.css" th:href="@{/css/semantic2.2.9.css}" />
         <link rel="stylesheet" type="text/css" href="../static/css/gym-page.css" th:href="@{/css/gymPage.css}" />
 
-        <title>Gym i din stad</title>
-
         <script>
 
             function toStartPage(id){
@@ -50,8 +48,9 @@
             };
 
         </script>
+        <title th:each="data : ${gymInfo}" th:text="'gymma.info - ' + ${data.gym_name}">Gym i din stad</title>
     </head>
-<body>                              <!--th:value="${data.website}" th:onclick="'javascript:toGymWebsite(value);' "> -->
+<body>
 <div class="ui grid">
     <div class="sixteen wide blue column nav">
         <div class="nav-menu gymma-logo-placement">
@@ -159,7 +158,7 @@
             </button>
         </div>
         <div class="bottom-buttons">
-            <button class="large blue ui button external-gym-button-settings" th:each="data : ${gymInfo}" th:text="'Till ' + ${data.gym_name} + ':s hemsida'" th:value="${data.website}" th:onclick="'javascript:toGymWebsite(value);' ">
+            <button class="large blue ui button external-gym-button-settings" th:each="data : ${gymInfo}" th:text="'Besök gymmets hemsida'" th:value="${data.website}" th:onclick="'javascript:toGymWebsite(value);' ">
                 Till gymets hemsida
             </button>
         </div>

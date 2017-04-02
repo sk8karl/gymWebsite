@@ -37,7 +37,7 @@
 
 
         </script>
-        <title>Gymma.info - hitta ditt gym</title>
+        <title th:each="data : ${townById}" th:text="'gymma.info - ' + ${data.town_name}">Gymma.info - hitta ditt gym</title>
     </head>
 <body>
 
