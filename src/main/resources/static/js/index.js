@@ -71,6 +71,8 @@
 				}
 
 				sortedMap.sort(function(a, b) {
+				   // console.log(a.value);
+				    //console.log(self.settings.compare(a.value, b.value) * direction);
 					return self.settings.compare(a.value, b.value) * direction;
 				});
 
@@ -108,13 +110,31 @@
 		asc: 'sorted ascending',
 		desc: 'sorted descending',
 		compare: function(a, b) {
-			if (a > b) {
-				return 1;
-			} else if (a < b) {
-				return -1;
-			} else {
-				return 0;
-			}
+		    //console.log(a);
+
+            console.log(isNaN(parseFloat(a)));
+            var check1 = isNaN(parseFloat(a));
+            var check2 = isNaN(parseFloat(b));
+            //console.log('check1: ' + check1);
+        if(!check1 || !check2) {
+            if (parseInt(a,10)>parseInt(b,10)) {
+                return 1;
+            } else if (parseInt(a,10)<parseInt(b,10)) {
+                return -1;
+            } else {
+                return 0;
+            }
+        } else {
+        if (a>b) {
+            return 1;
+        } else if (a<b) {
+            return -1;
+        } else {
+            return 0;
+        }
+
+        }
+
 		}
 	};
 
