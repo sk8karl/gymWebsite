@@ -60,6 +60,10 @@
     width: 40px;
 }
 
+.pricelist-size {
+    height: 100% !important;
+}
+
 .info-icon {
     height: 25px !important;
     width: 25px !important;

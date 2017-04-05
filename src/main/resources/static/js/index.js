@@ -110,12 +110,10 @@
 		asc: 'sorted ascending',
 		desc: 'sorted descending',
 		compare: function(a, b) {
-		    //console.log(a);
 
-            console.log(isNaN(parseFloat(a)));
             var check1 = isNaN(parseFloat(a));
             var check2 = isNaN(parseFloat(b));
-            //console.log('check1: ' + check1);
+        
         if(!check1 || !check2) {
             if (parseInt(a,10)>parseInt(b,10)) {
                 return 1;
