@@ -100,66 +100,48 @@ google.maps.event.addListener(marker, 'mouseover', function() {
 
 function indexMap(){
 
-    var gymsFromList = new Array();
-    var rowCount = document.getElementById("indexTable").rows.length;
-
-    for (var i=1; i<rowCount; i++){
-        var row = document.getElementById("indexTable").rows[i].cells;
-        var gymName = row[1].innerHTML;
-
-        gymsFromList.push(gymName);
-    }
-        console.log(gymsFromList);
-
-
+    var queries = ['gym', 'crossfit'];
     var getDivFromGymPage = document.getElementById('map');
     var latitude = Number(getDivFromGymPage.dataset.latitude);
     var longitude = Number(getDivFromGymPage.dataset.longitude);
 
-    getGymLocation(gymsFromList, latitude, longitude);
+
+
+    getGymLocation(queries, latitude, longitude);
+
 
 }
 
-function getGymLocation(gymsFromList, latitude, longitude) {
+    function getGymLocation(queries, latitude, longitude) {
 
-    var town = {lat: latitude, lng: longitude};
-    var allRequests = new Array();
+        var town = {lat: latitude, lng: longitude};
 
-    map = new google.maps.Map(document.getElementById('map'), {
-      center: town,
-      zoom: 12
-    });
+        map = new google.maps.Map(document.getElementById('map'), {
+              center: town,
+              zoom: 12
+            });
 
-    infowindow = new google.maps.InfoWindow();
-    service = new google.maps.places.PlacesService(map);
-    var hej = 1;
+        infowindow = new google.maps.InfoWindow();
+        service = new google.maps.places.PlacesService(map);
 
-    for (var i = 0; i<gymsFromList.length; i++){
+        for (i=0; i<queries.length; i++) {
         var request = {
 
             location: town,
-            radius: '5000',
-            keyword: gymsFromList[i]
+            radius: '3000',
+            query: queries[i]
         };
 
-         //console.log('querystring: ' + gymsFromList[i]);
-
-         service.nearbySearch(request, callback);
-
-        console.log('hej: ' + hej);
-        hej++;
-         //allRequests.push(request);
+        service.textSearch(request, callback);
+        }
     }
-    //console.log(allRequests);
-}
-
 
 function callback(results, status) {
     if (status === google.maps.places.PlacesServiceStatus.OK) {
 
         for (var i = 0; i < results.length; i++) {
 
-        createMarker(results[i]);
+            createMarker(results[i]);
 
         }
     }
@@ -172,7 +154,6 @@ function createMarker(place) {
       position: place.geometry.location
 
 });
-
 google.maps.event.addListener(marker, 'mouseover', function() {
     infowindow.setContent(place.name);
     infowindow.open(map, this);
