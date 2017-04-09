@@ -15,18 +15,13 @@
     <meta name="description" content="Jämför alla gymkedjor i Sverige. Jämför alla priser på årskort och vilka aktiviteter gymmen erbjuder." />
     <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
     <meta http-equiv="Content-Type" content="text/templates; charset=UTF-8" />
-    <script language="JavaScript" type="text/javascript" th:src="@{/js/maps.js}"></script>
     <link rel="icon" th:href="@{/img/favicon.jpg}" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.css" />
     <link rel="stylesheet" type="text/css" href="/css/index.css" th:href="@{/css/index.css}" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
-    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/semantic.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/components/search.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.2/components/search.min.css"></script>
+
+
 
     <script>
             function rowClicked(value) {
@@ -38,37 +33,13 @@
                 location.href = "/city=" + townid;
             };
 
-            function cityClickedDropdown(townid) {
-                location.href = "/city=" + townid;
-            };
 
             function cityClickedButton(townid) {
+            console.log("hej");
                 location.href = "/city=" + townid;
             };
 
-
-              var content = [
-                    {
-                      title: 'Horse',
-                      description: 'An Animal',
-                    },
-                    {
-                      title: 'Cow',
-                      description: 'Another Animal',
-                    }
-                  ]
-                ;
-                $('.ui.search')
-                console.log("hej");
-                  .search({
-                    source : content,
-                    searchFields   : [
-                      'title'
-                    ],
-                    searchFullText: false
-                  });
-
-        </script>
+    </script>
     <title>Gymma.info - Hitta ditt gym</title>
 </head>
 <body>
