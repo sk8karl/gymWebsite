@@ -1,9 +1,7 @@
 package com.karl.controller;
-import com.karl.Entity.Gym;
 import com.karl.service.GymService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.web.ErrorController;
-import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.servlet.ModelAndView;
 
@@ -34,6 +32,7 @@ import org.springframework.web.servlet.ModelAndView;
         mav.addObject("gymData", gymService.getAllGyms_year());
         mav.addObject("towns", gymService.getTowns());
         mav.addObject("gymmaLogo", gymService.getGymmaInfoLogo());
+
         return mav;
     }
 
@@ -59,7 +58,13 @@ import org.springframework.web.servlet.ModelAndView;
         mav.addObject("town_name", gymService.getTownById(t_id));
         mav.addObject("descriptions", gymService.getGymDescriptionById(g_id));
         mav.addObject("towns", gymService.getTowns());
+
         return mav;
+    }
+
+    @RequestMapping(value = "/", method = RequestMethod.POST)
+    public String redirect2() {
+        return "/";
     }
 /*
     @RequestMapping(value = "/{g_id}", method = RequestMethod.DELETE)

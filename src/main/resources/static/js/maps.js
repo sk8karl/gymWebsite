@@ -98,7 +98,7 @@ google.maps.event.addListener(marker, 'mouseover', function() {
 
 // Display all gyms for a specific town
 
-function indexMap(){
+function cityMap(){
 
     var queries = ['gym', 'crossfit'];
     var getDivFromGymPage = document.getElementById('map');
@@ -128,7 +128,7 @@ function indexMap(){
         var request = {
 
             location: town,
-            radius: '1000',
+            radius: '7000',
             query: queries[i]
         };
 
