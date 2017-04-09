@@ -11,8 +11,8 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 
     @RequestMapping(value = "/")
-    public class GymController {
-/*
+    public class GymController implements ErrorController{
+
     private static final String PATH = "/error";
 
     @RequestMapping(value = PATH)
@@ -24,7 +24,7 @@ import org.springframework.web.servlet.ModelAndView;
     public String getErrorPath() {
         return PATH;
     }
-*/
+
     @Autowired
     private GymService gymService;
 
@@ -34,12 +34,6 @@ import org.springframework.web.servlet.ModelAndView;
         mav.addObject("gymData", gymService.getAllGyms_year());
         mav.addObject("towns", gymService.getTowns());
         mav.addObject("gymmaLogo", gymService.getGymmaInfoLogo());
-        return mav;
-    }
-
-    @RequestMapping(value = "/map", method = RequestMethod.GET)
-    public ModelAndView map() {
-        ModelAndView mav = new ModelAndView("google","data", gymService.getAllGyms_year());
         return mav;
     }
 
