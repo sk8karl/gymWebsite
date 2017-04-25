@@ -31,7 +31,6 @@ function swedenMap(){
     }
 
     console.log(gymsFromList);
-
     getGymLocationSweden(gymsFromList, sweCords, townCords);
 }
 
