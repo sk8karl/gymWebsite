@@ -64,6 +64,8 @@
     </dependencies>
     <properties>
         <java.version>1.8</java.version>
+        <start-class>com.karl.main</start-class>
+
     </properties>
     <build>
         <plugins>
