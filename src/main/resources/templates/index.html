@@ -52,7 +52,7 @@
                         <img class="gymma_logo" th:each="data : ${gymmaLogo}" th:src="@{'/img/' + ${data.gymma_logo_path}} " />
                     </div>
                     <div class="right menu">
-                        <select name="Stad" class="ui fluid search dropdown town-selection-head" onchange="cityClicked(this)">
+                        <select name="Stad" id="town-list" class="ui fluid search dropdown town-selection-head" onchange="cityClicked(this)">
                             <option> Välj stad</option>
                             <option th:each="data : ${towns}" th:text="${data.town_name}" th:id="${data.t_id}">Stockholm</option>
                         </select>
@@ -65,16 +65,10 @@
                 <h2 class="headline-font">Jämför priser, utbud på aktivteter och antalet lokaler för alla gymkedjor i din stad.</h2>
             </div>
 
-            <div class="ui search">
-                <input id="indexTable" class="prompt" type="text" placeholder="Välj stad..." />
+            <div class="ui search massive">
+                <input id="indexSearch" class="prompt searchbar" type="text" placeholder="Välj stad..." />
                 <div class="results"></div>
             </div>
-
-            <br /><br /><br /><br />
-
-            <button class="ui primary button large town-button-select" th:each="data : ${towns}" th:text="${data.town_name}" th:onclick="'javascript:cityClickedButton(\'' + ${data.t_id} + '\');' ">
-                Town name
-            </button>
 
             <div type="button" class="ui compact menu town-selection-mobile">
                 <div type="button" class="ui simple dropdown item dropdown-size">

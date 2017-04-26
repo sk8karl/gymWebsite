@@ -99,12 +99,10 @@ google.maps.event.addListener(marker, 'mouseover', function() {
 
 function cityMap(){
 
-    var queries = ['gym', 'crossfit'];
+    var queries = ['gym', 'crossfit', 'SATS', 'Actic'];
     var getDivFromGymPage = document.getElementById('map');
     var latitude = Number(getDivFromGymPage.dataset.latitude);
     var longitude = Number(getDivFromGymPage.dataset.longitude);
-
-
 
     getGymLocation(queries, latitude, longitude);
 
@@ -127,7 +125,7 @@ function cityMap(){
         var request = {
 
             location: town,
-            radius: '7000',
+            radius: '2500',
             query: queries[i]
         };
 
