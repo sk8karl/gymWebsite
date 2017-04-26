@@ -125,7 +125,7 @@ function cityMap(){
         var request = {
 
             location: town,
-            radius: '2500',
+            radius: '1500',
             query: queries[i]
         };
 
