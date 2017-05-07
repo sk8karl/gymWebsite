@@ -81,13 +81,13 @@
             <uniqueVersion>false</uniqueVersion>
             <id>gymma_website</id>
             <name></name>
-            <url>scp://home/karl/gymWebsite</url>
+            <url>scp://127.0.0.1/home/karl/gymWebsite</url>
             <layout>default</layout>
         </repository>
         <site>
             <id>gymma.info</id>
             <name>gymma Website</name>
-            <url>scp://127.0.0.1/</url>
+            <url>scp://gymma.info</url>
         </site>
     </distributionManagement>
 
