@@ -21,30 +21,20 @@
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" />
     <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-    <script th:src="@{/js/search.js}"></script>
+    <script th:src="@{/js/index.js}"></script>
 
-
-    <script>
-            function rowClicked(value) {
-                location.href = "/gym/" + value;
-            };
-
-            function cityClicked(s) {
-                var townid = s[s.selectedIndex].id
-                location.href = "/city=" + townid;
-            };
-
-
-            function cityClickedButton(townid) {
-            console.log("hej");
-                location.href = "/city=" + townid;
-            };
-
-    </script>
     <title>Gymma.info - Hitta ditt gym</title>
 </head>
 <body>
-    <div class="ui centered grid background-img-index">
+
+<div class="ui segment" id="cover">
+    <div class="ui active inverted dimmer">
+        <div class="ui text loader">Laddar</div>
+    </div>
+    <p></p>
+</div>
+
+<div class="ui centered grid background-img-index">
         <div class="sixteen wide blue column nav">
             <div class="nav-menu">
                 <div class="ui secondary menu gymma-logo-placement">
@@ -65,19 +55,15 @@
                 <h2 class="headline-font">Jämför priser, utbud på aktivteter och antalet lokaler för alla gymkedjor i din stad.</h2>
             </div>
 
-            <div class="ui search massive">
-                <input id="indexSearch" class="prompt searchbar" type="text" placeholder="Välj stad..." />
+            <div class="ui search massive index-search-bar">
+                <input id="indexSearch" class="prompt searchbar searchbar-size" type="text" placeholder="Sök efter stad..." />
                 <div class="results"></div>
             </div>
-
-            <div type="button" class="ui compact menu town-selection-mobile">
-                <div type="button" class="ui simple dropdown item dropdown-size">
-                    <h3 class="dropdown-title">Välj stad</h3>
-                    <i class="dropdown icon dropdown-icon"></i>
-                    <div class="menu">
-                        <div class="item" th:each="data : ${towns}" th:text="${data.town_name}" th:onclick="'javascript:cityClickedDropdown(\'' + ${data.t_id} + '\');' ">Choice 1</div>
-                    </div>
-                </div>
+            <div class="ui blue">
+                <select name="Stad" class="ui fluid search dropdown town-selection-mobile" onchange="cityClicked(this)">
+                    <option>Välj stad...</option>
+                    <option th:each="data : ${towns}" th:text="${data.town_name}" th:id="${data.t_id}">Stockholm</option>
+                </select>
             </div>
         </div>
             <div class="eight wide column footer">

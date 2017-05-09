@@ -14,7 +14,7 @@ public class main {
         SpringApplication.run(main.class, args);
 
     }
-
+/*
     @Bean
     public EmbeddedServletContainerFactory servletContainer() {
 
@@ -30,7 +30,7 @@ public class main {
 
         return tomcat;
     }
-
+*/
 }
 
 

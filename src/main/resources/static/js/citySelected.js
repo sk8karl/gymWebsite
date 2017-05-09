@@ -1,3 +1,30 @@
+
+
+
+function rowClicked(value) {
+        location.href = "/gym/" + value;
+    };
+
+function toStartPage(id){
+    window.location.href="/";
+};
+
+function townIdSelect(s) {
+  var value = s[s.selectedIndex].id
+    location.href = "/city=" + value;
+};
+
+$(document).ready(function() {
+$("#cover").fadeOut(function() {
+    $(this).remove();
+    });
+});
+
+$(document).ready(function() {$('table').tablesort()});
+
+
+
+
 /*
 	A simple, lightweight jQuery plugin for creating sortable tables.
 	https://github.com/kylefox/jquery-tablesort

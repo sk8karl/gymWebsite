@@ -1,5 +1,5 @@
-#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; background: #000; z-index:9999;
-    font-size: 60px; text-align: center; padding-top: 200px; color: #fff;
+#cover {position: fixed; height: 100%; width: 100%; top:0; left: 0; z-index:9999;
+     text-align: center; padding-top: 200px;
 }
 
 .nav{
@@ -27,7 +27,12 @@
 }
 
 .town-selection-mobile {
-    margin-top: 35px;
+    color: white;
+    background-color: #2185D0;
+    height: 50px !important;
+    font-size: 20px !important;
+    width: 80% !important;
+    margin: 0% auto;
 }
 
 .background-image {
@@ -51,15 +56,13 @@
 }
 
 .searchbar {
-    padding: 3% 20% !important;
     opacity: 0.95;
-}
-.headline-font {
-    font-size: 3rem;
+    width: 80%;
 }
 
-.dropdown-size {
-    width: 100%;
+
+.headline-font {
+    font-size: 3rem;
 }
 
 .gymma_logo {
@@ -73,11 +76,6 @@
 
 .town-button-select {
     margin-left: 5% !important;
-}
-
-.town-selection-mobile {
-    background-color: #2185D0 !important;
-    width: 80%;
 }
 
 .dropdown-icon {
@@ -107,6 +105,10 @@
 @media only screen and (max-width: 791px) {
     .web-view {
         display: none
+    }
+
+    .index-search-bar {
+        display: none;
     }
 
     .town-selection-head {

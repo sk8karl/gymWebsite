@@ -16,41 +16,24 @@
         <meta charset="utf-8" />
 
         <script language="JavaScript" type="text/javascript" th:src="@{/js/maps.js}"></script>
+        <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script language="JavaScript" type="text/javascript" th:src="@{/js/gymPage.js}"></script>
+
         <link rel="icon" th:href="@{/img/favicon.jpg}" />
         <link rel="stylesheet" type="text/css" href="../static/css/gym-page.css" th:href="@{/css/semantic2.2.9.css}" />
         <link rel="stylesheet" type="text/css" href="../static/css/gym-page.css" th:href="@{/css/gymPage.css}" />
 
-        <script>
-
-            function toStartPage(id){
-                window.location.href="/";
-            };
-
-            function toGymsInTown(id){
-                window.location.href="/city=" + id;
-            };
-
-            function returnWithTownId(s) {
-              var value = s[s.selectedIndex].id
-                location.href = "/city=" + value;
-            };
-
-            function toGymWebsite(url){
-                window.open(url,'karl');
-            };
-
-            function townIdSelectGymPage(s) {
-
-              var value = s[s.selectedIndex].id
-              var getDivFromGymPage = document.getElementById('gymTitle');
-              var selectedGymID = getDivFromGymPage.dataset.gymid;
-              location.href = "/gym/" + selectedGymID + "/" + value;
-            };
-
-        </script>
         <title th:each="data : ${gymInfo}" th:text="'gymma.info - ' + ${data.gym_name}">Gym i din stad</title>
     </head>
 <body>
+
+<div class="ui segment" id="cover">
+    <div class="ui active inverted dimmer">
+        <div class="ui text loader">Laddar</div>
+    </div>
+    <p></p>
+</div>
+
 <div class="ui grid">
     <div class="sixteen wide blue column nav">
         <div class="nav-menu gymma-logo-placement">
