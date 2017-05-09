@@ -13,13 +13,13 @@ function townIdSelect(s) {
   var value = s[s.selectedIndex].id
     location.href = "/city=" + value;
 };
-
+/*
 $(document).ready(function() {
 $("#cover").fadeOut(function() {
     $(this).remove();
     });
 });
-
+*/
 $(document).ready(function() {$('table').tablesort()});
 
 
