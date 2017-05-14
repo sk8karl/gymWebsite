@@ -4,13 +4,13 @@ function cityClicked(s) {
     var townid = s[s.selectedIndex].id
     location.href = "/city=" + townid;
 };
-/*
+
 $(document).ready(function() {
 $("#cover").fadeOut(function() {
     $(this).remove(); // Optional if it's going to only be used once.
     });
 });
-*/
+
 
 // Search bar functionality
 

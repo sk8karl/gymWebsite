@@ -22,10 +22,9 @@ function townIdSelectGymPage(s) {
   var selectedGymID = getDivFromGymPage.dataset.gymid;
   location.href = "/gym/" + selectedGymID + "/" + value;
 };
-/*
+
 $(document).ready(function() {
 $("#cover").fadeOut(function() {
     $(this).remove();
     });
 });
-*/
