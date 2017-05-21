@@ -23,6 +23,8 @@ public interface GymDao {
 
     Collection<Gym> getGymByTownId(int t_id);
 
+    Collection<Gym> getGymByTownIdDaypass(int t_id);
+
     Collection<Gym> getGoogleMapsInfo(int g_id, int t_id);
 
     Collection<Gym> getGeneralGymInfo(int g_id);

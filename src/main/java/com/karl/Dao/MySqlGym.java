@@ -63,7 +63,7 @@ public class MySqlGym implements GymDao {
                 "                            Join town ON gym_town.t_id=town.t_id " +
                 "                            where town.t_id=? " +
                 "                            AND (pricelist.category='Årskort' OR pricelist.category='Månadskort autogiro' OR pricelist.category='Livsstilsprogram - Bas, dagsavgift')" +
-                "                            GROUP by gym.g_id ";
+                "                            GROUP by gym.gym_name ";
 
         List<Gym> gyms = jdbcTemplate.query(sql, new RowMapper<Gym>(){
             @Override
@@ -84,6 +84,7 @@ public class MySqlGym implements GymDao {
 
         return gyms;
     }
+
 
     @Override
     public Collection<Gym> getPricelistOfGym(int g_id) {
@@ -258,6 +259,39 @@ public class MySqlGym implements GymDao {
         }, g_id);
 
         return gym;
+    }
+
+    @Override
+    public Collection<Gym> getGymByTownIdDaypass(int t_id) {
+        final String sql = "SELECT gym.g_id, town.town_name, town.t_id, pricelist.price_unit, gym.logo_path, gym.gym_name, gym.website, pricelist.price, pricelist.category, " +
+                "                           group_concat(distinct activities.activity separator ', ') as activity FROM gym " +
+                "                            JOIN gym_activity ON gym.g_id=gym_activity.g_id " +
+                "                            JOIN activities ON gym_activity.a_id=activities.a_id " +
+                "                            Join pricelist ON gym.g_id=pricelist.g_id " +
+                "                            Join gym_town ON gym.g_id=gym_town.g_id " +
+                "                            Join town ON gym_town.t_id=town.t_id " +
+                "                            where town.t_id=? " +
+                "                            AND (pricelist.category='Dagskort'" +
+                "                            GROUP by gym.g_id ";
+
+        List<Gym> gyms = jdbcTemplate.query(sql, new RowMapper<Gym>(){
+            @Override
+            public Gym mapRow(ResultSet rs, int i) throws SQLException {
+                Gym gym = new Gym();
+                gym.setG_id(rs.getInt("g_id"));
+                gym.setGym_name(rs.getString("gym_name"));
+                gym.setLogo_path(rs.getString("logo_path"));
+                gym.setPrice(rs.getInt("price"));
+                gym.setCategory(rs.getString("category"));
+                gym.setActivity(rs.getString("activity"));
+                gym.setT_id(rs.getInt("t_id"));
+                gym.setPrice_unit(rs.getString("price_unit"));
+
+                return gym;
+            }
+        }, t_id);
+
+        return gyms;
     }
 
 

@@ -217,10 +217,18 @@ function callback(results, status) {
 }
 
 function createMarker(place) {
+    var image = {
+        url: '/img/blueMarker.png'
+      };
+
     var placeLoc = place.geometry.location;
     var marker = new google.maps.Marker({
       map: map,
-      position: place.geometry.location
+      position: place.geometry.location,
+      icon: {
+            url: '/img/blue_marker.png',
+            scaledSize: new google.maps.Size(18, 32)
+      }
 
 });
 

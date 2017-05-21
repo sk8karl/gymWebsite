@@ -60,8 +60,6 @@ public class Gym {
         this.G_id = G_id;
     }
 
-
-
     public String getLogo_path() {
         return logo_path;
     }

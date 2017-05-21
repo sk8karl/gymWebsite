@@ -2,8 +2,8 @@
 
 
 function rowClicked(value) {
-        location.href = "/gym/" + value;
-    };
+    location.href = "/gym/" + value;
+};
 
 function toStartPage(id){
     window.location.href="/";
@@ -19,6 +19,8 @@ $("#cover").fadeOut(function() {
     $(this).remove();
     });
 });
+
+
 
 $(document).ready(function() {$('table').tablesort()});
 

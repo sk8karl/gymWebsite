@@ -30,6 +30,11 @@
     margin-top: 35px;
 }
 
+.info-message {
+    color: white;
+    float: left;
+}
+
 .background-image {
     width: 100%;
     margin-top: 7px;
@@ -45,6 +50,7 @@
 .event-table {
     opacity: 0.95;
     margin: 20px 0px !important;
+    border-radius: 5px;
 }
 
 .float-right {
