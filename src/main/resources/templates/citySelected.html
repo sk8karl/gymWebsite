@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
     <head>
+        <!-- Google Tag Manager -->
+        <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-T3N8VC6');
+        </script>
+        <!-- End Google Tag Manager -->
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
             (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -27,7 +35,10 @@
         </script>
     </head>
 <body>
-
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-T3N8VC6"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 <div class="ui segment" id="cover">
     <div class="ui active inverted dimmer">
         <div class="ui text loader">Laddar</div>
@@ -65,7 +76,7 @@
                 <div class="logo-div-card">
                     <img class="logo-size mobile-view-logo" th:src="@{'/img/' + ${data.logo_path}} " />
                 </div>
-                <div class="content card-info">
+                <div class="content card-info gym-analytics">
                     <div class="header gym-label gym-name" th:text="${data.gym_name}">gym</div>
                     <div class="meta" th:text="${data.activity}">Activity</div>
                     <div class="description" th:text="${data.category} + ':  ' + ${data.price} + ' ' +  ${data.price_unit} ">kort: pris </div>
@@ -83,7 +94,7 @@
                 </tr>
             </thead>
             <tbody>
-                <tr class="row-size" th:each="data : ${gymData}" th:onclick="'javascript:rowClicked(\'' + ${data.g_id} + '/' + ${data.t_id} + '\');' ">
+                <tr class="row-size gym-analytics" th:each="data : ${gymData}" th:onclick="'javascript:rowClicked(\'' + ${data.g_id} + '/' + ${data.t_id} + '\');' ">
                     <td class="first_column">
                         <img class="logo-size" th:src="@{'/img/' + ${data.logo_path}} " /></td>
                     <td class="column-size gym-label"  th:text="${data.gym_name}">hej</td>
