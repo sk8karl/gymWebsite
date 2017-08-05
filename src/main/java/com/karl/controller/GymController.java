@@ -9,8 +9,8 @@ import org.springframework.web.servlet.ModelAndView;
 @RestController
 
     @RequestMapping(value = "/")
-    public class GymController{
-/*
+    public class GymController implements ErrorController{
+
     private static final String PATH = "/error";
 
     @RequestMapping(value = PATH)
@@ -22,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
     public String getErrorPath() {
         return PATH;
     }
-*/
+
     @Autowired
     private GymService gymService;
 
