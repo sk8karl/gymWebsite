@@ -101,6 +101,28 @@
     float: left;
 }
 
+.info-section {
+    display: inline-block;
+    padding: 40px 0px;
+}
+
+.three-info-section {
+    width: 33% !important;
+    min-width: 300px !important;
+    text-align: center;
+}
+
+.info-icon {
+    height: 50px;
+}
+
+.info-label {
+    font-weight: bold;
+}
+
+.info-text {
+}
+
 
 @media only screen and (max-width: 791px) {
     .web-view {
