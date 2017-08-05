@@ -21,8 +21,6 @@ public class GymService {
 
     public Collection<Gym> getGymByTownId(int t_id) {return this.gymDao.getGymByTownId(t_id); }
 
-    public Collection<Gym> getGymByTownIdDaypass(int t_id) {return this.gymDao.getGymByTownIdDaypass(t_id); }
-
     public Collection<Gym> getPricelistOfGym(int G_id) {return this.gymDao.getPricelistOfGym(G_id); }
 
     public Collection<Gym> getGymsActivitiesById(int G_id) {return this.gymDao.getGymsActivitiesById(G_id); }
